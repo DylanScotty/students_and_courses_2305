@@ -5,4 +5,15 @@ class Course
         @capacity = capacity
         @students = []
     end
+
+    def full?
+        @students.length >= @capacity
+    end
+
+    def enroll(student)
+        if !full?
+            @students << student
+        end
+    end
+    
 end
